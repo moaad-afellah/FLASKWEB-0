@@ -10,10 +10,8 @@ def index():
 def login():
     email = request.form.get('email')
     password = request.form.get('password')
-    with open("./login_data.txt", "a") as f:
-        f.write("email: " + email + "\n")
-        f.write("password: " + password + "\n")
-        f.write("========================"+"\n")
+    print(email)
+    print(password)
     return render_template("Welcome.html" ,email_t=email ,password_t=password)
 
 # @app.route('/',methods=['GET'])
