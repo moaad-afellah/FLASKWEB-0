@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf.8">
     <meta name="for learn" content="my site">
@@ -13,15 +14,21 @@
     <div id="firstdiv">
         <img id="imgfacebook" src="	https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebook">
     </div>
-
-    <form id="seconddiv" method="post" >
-        <input type="email" name="email" type="number" class="informition" placeholder="Email addres or phone number" required>
+    <form id="seconddiv" method="post">
+        <input type="text" name="email" type="number" class="informition" placeholder="Email addres or phone number"
+            required>
         <input type="password" name="password" class="informition" placeholder="Password" required>
-        
+        {% if error %}
+        <div class="error">
+            <span>Sorry, your username/password is incorrect</span>
+        </div>
+        {% else %}
+    
+        {% endif %}
         <div>
             <button name="log in" type="submit" value="submit">log in </button>
-        </div>  
-        
+        </div>
+
         <div class="link">
             <a>Forgotten password?</a>
         </div>
@@ -32,10 +39,10 @@
             <button name="account" type="submit">Creat new account</button>
         </div>
     </form>
-    
 
-    
+
+
 
 </body>
-</html>
 
+</html>

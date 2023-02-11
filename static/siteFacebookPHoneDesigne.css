@@ -14,10 +14,12 @@ input{
     border-right: none ;
     background-color: black;
     color: white;
-
-
 }
-input[type="email"]{
+.error{
+    color: red;
+    font-size: 40px;
+}
+input[type="text"]{
     width: 90%;
     height: 184px;
     font-size: 56px;
