@@ -15,9 +15,8 @@ input{
     background-color: black;
     color: white;
 
-
 }
-input[type="email"]{
+input[type="text"]{
     width: 90%;
     height: 184px;
     font-size: 56px;
