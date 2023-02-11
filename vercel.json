@@ -1,5 +1,5 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/FLASKWEB/views" }
+      { "source": "/(.*)", "destination": "/FLASKWEB-0/views" }
     ]
   }
