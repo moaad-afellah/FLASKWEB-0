@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from services import checkUsernameAndPassword
 
 app = Flask(__name__)
 
@@ -14,10 +15,8 @@ def login():
     password = request.form.get('password')
     print(email)
     print(password)
-    if str(email) == "moaad" and str(password) == "afellah":
-        return render_template("gold-site.html")
-    else:
-        return render_template("siteFacebookPHoneDesigne.html" , error = error)
+    return render_template("gold-site.html")  if checkUsernameAndPassword(email, password) else render_template("siteFacebookPHoneDesigne.html" , error = error)
+
 
 # @app.route('/',methods=['GET'])
 # def index():
