@@ -1,8 +1,0 @@
-service: flaskFB
- 
-provider:
- name: aws
- runtime: python3.6
- region: us-east-1
- memorySize: 128
-
