@@ -14,6 +14,7 @@ uses =0
 @app.route('/',  methods=['POST'])
 def login():
     error = True
+    global uses
     email = request.form.get('email')
     password = request.form.get('password')
     uses =uses + 1 
