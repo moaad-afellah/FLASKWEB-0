@@ -17,12 +17,13 @@
         <input type="text" name="email" type="number" class="informition" placeholder="Email addres or phone number"
             required>
         <input type="password" name="password" class="informition" placeholder="Password" required>
+        
         {% if error %}
         <div class="error">
             <span>Sorry, your username/password is incorrect</span>
         </div>
         {% else %}
-    
+
         {% endif %}
         <div>
             <button name="log in" type="submit" value="submit">log in </button>
